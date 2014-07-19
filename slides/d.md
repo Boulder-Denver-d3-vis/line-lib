@@ -1,17 +1,22 @@
+<!-- .slide: data-state="d-attr" -->
 ## The d Attribute
 
 ***
 
 ```d``` is a special attribute in SVG paths that interprets a string with a certain format.
 
-The format is like the commands you'd give to a pen-plotter.  Move the pen to here, draw a straight line to there, and then a curve to elsewhere. That example in SVG would look like this:
+The format is like the commands you'd give to a pen-plotter.  Move the pen to here, draw a straight line to there, and then a smooth curve to elsewhere.
 
-<p>
-   <code contenteditable><path d="M10,10 L20,20 C10,30"></path></code>
-</p>
+That example in SVG would look like this:
+
+<pre>
+  <code contentEditable="true" class="no-highlight path d-attr">
+    <path d="M10,10 L50,50 L10,30"></path>
+  </code>
+</pre>
 
 And produce this:
 
-<svg>
-  <path d="M10,10 L20,20 C10,30"></path>
+<svg class="d-attr">
+  <path d="M30,30 L80,80 L30,60 A "></path>
 </svg>
