@@ -20,3 +20,9 @@
   stroke: #333;
   stroke-width: 4px;
 }
+
+path.can-we {
+  stroke: #333;
+  fill: none;
+  stroke-width: 4px;
+}

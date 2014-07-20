@@ -1,9 +1,13 @@
 /* global Reveal */
 /* global console */
+/* global CodeMirror */
 /* global d3 */
+/* global document */
 /* jshint indent: false */
 /* jshint -W015 */
 /* jshint -W098 */
+/* jshint evil: true */
+/* jshint quotmark: true */
 
 (function () {
   'use strict';
@@ -42,5 +46,23 @@
 
   Reveal.addEventListener('d-attr', function (event) {
     evalSvg('code.d-attr', 'svg.d-attr');
+  });
+
+  function ourline(d) {
+    var out = "M0,0";
+    for(var i = 0; i < d.length; i++) {
+      out += " L" + (i * 40) + "," + (d[i] * 20);
+    }
+    return out;
+  }
+
+  Reveal.addEventListener('can-we', function (event) {
+    var data = [2, 9, 4, 7, 5, 9, 2, 0, 4, 8, 2, 0, 4],
+        code = document.getElementById('can-we-code').innerText,
+        source = d3.select("code.can-we");
+   eval(code);
+   console.log(code, typeof(code));
+   var svg = d3.select("svg.can-we");
+   svg.datum(data).append("path").classed("can-we", true).attr("d", ourline);
   });
 })();
