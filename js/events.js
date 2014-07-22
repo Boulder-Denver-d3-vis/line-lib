@@ -49,19 +49,15 @@
   });
 
   function ourline(d) {
-    var out = "M0,0";
-    for(var i = 0; i < d.length; i++) {
-      out += " L" + (i * 40) + "," + (d[i] * 20);
+    var out = "M5," + (d[0] + 5);
+    for(var i = 1; i < d.length; i++) {
+      out += " L" + (i * 40 + 5) + "," + (d[i] * 20 + 5);
     }
     return out;
   }
 
   Reveal.addEventListener('can-we', function (event) {
-    var data = [2, 9, 4, 7, 5, 9, 2, 0, 4, 8, 2, 0, 4],
-        code = document.getElementById('can-we-code').innerText,
-        source = d3.select("code.can-we");
-   eval(code);
-   console.log(code, typeof(code));
+   var data = [2, 9, 4, 7, 5, 9, 2, 0, 4, 8, 2, 0, 4];
    var svg = d3.select("svg.can-we");
    svg.datum(data).append("path").classed("can-we", true).attr("d", ourline);
   });
