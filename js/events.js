@@ -45,7 +45,7 @@
   });
 
   Reveal.addEventListener('d-attr', function (event) {
-    evalSvg('code.d-attr', 'svg.d-attr');
+    evalSvg('pre.d-attr', 'svg.d-attr');
   });
 
   function ourline(d) {

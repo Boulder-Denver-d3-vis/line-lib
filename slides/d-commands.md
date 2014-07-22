@@ -5,12 +5,14 @@
 Commands are one letter followed by one or more comma-separated arguments.
 
 * ```Mx,y``` : Move (pen up) to x, y coordinates
-* ```mx,y``` : Move (pen up) x, y relative to current position
+* ```mx,y``` : Move (pen up) current position + (x, y)
 * ```Lx,y``` : Straight line to x, y coordinate
-* ```lx,y``` : Straight line x, y from current position
+* ```lx,y``` : Straight line to current position + (x, y)
 
 ***
 
-There are more. C for ellipsoid curves around a point, S and Q for Bezier and Quadratic curves with control points, etc.
+There are more. H and V for simple horizontal and vertical lines, C for cubic Bézier curves, Q for Quadratic curves, A for elliptical arcs.
+
+Read [the spec](http://www.w3.org/TR/SVG/paths.html#PathData)!
 
 

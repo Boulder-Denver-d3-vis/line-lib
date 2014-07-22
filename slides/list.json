@@ -2,7 +2,6 @@
     "index.md",
     "purpose.md",
     "useful-how.md",
-    "examples.md",
     "problem.md",
     "svg-path.md",
     "path-how.md",
@@ -13,5 +12,7 @@
     "point.md",
     "annotate.md",
     "custom-shapes.md",
+    "use-d3.md",
+    "connector.md",
     "end.md"
 ]
